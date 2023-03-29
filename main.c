@@ -98,12 +98,13 @@ void execute_task_4(){
 }
 
 void execute_task_5(){
-    int i,j;
+    int i,j,p;
     float** a;
 
     spaceformatrix(&i,&j,&a);
     generatematrix(i,j,a);
     sumofborderelements(i,j,a);
-
+    for (p=0;p<i;p++){
+        free(a[p]);
     free(a);
 }
